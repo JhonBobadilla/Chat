@@ -4,6 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chat</title>
+    
+    
+    <script type="module">
+     import { io } from 'https://cdn.socket.io/4.3.2/socket.io.esm.min.js'
+
+    const socket = io()
+    </script>
+    
     <style>
         *,
         *::before,
@@ -76,7 +84,7 @@
         }
     
         #form>button {
-          background: #09f;
+          background: #7ed957;
           color: #fff;
           border: 0;
           margin: 4px;
@@ -84,7 +92,7 @@
         }
     
         #form>button:hover {
-          background: #0cf;
+          background: #09f;
         }
       </style>
     

@@ -6,6 +6,8 @@ import { createClient } from '@libsql/client'
 import { Server } from 'socket.io'
 import { createServer } from 'node:http'
 
+dotenv.config()
+
 const port = process.env.PORT ?? 3000
 
 const app = express()
@@ -28,7 +30,7 @@ await db.execute(`
 
 
 
-io.on('connection', (socket) => {
+io.on('connection', async (socket) => {
     console.log('an user has connected!')
 
     socket.on('disconnect', () => {
@@ -48,6 +50,23 @@ io.on('connection', (socket) => {
         }
         io.emit('chat message', msg, result.lastInsertRowid.toString()) 
     })
+     console.log('auth')
+     console.log(socket.handshake.auth)
+    if (!socket.recovered) { 
+    try {
+        const result = await db.execute({
+            sql: 'SELECT id, content FROM messages WHERE id > ?',
+            args: [socket.handshake.auth.serverOffset ?? 0]
+    })
+
+    result.rows.forEach(row => {
+        socket.emit('chat message', row.content, row.id.toString())
+    })
+
+    } catch (e){
+        console.error(e)
+    }
+   }
 })
 
 app.use(logger('dev'))
@@ -61,7 +80,7 @@ server.listen(port, () => {
 })
 
 
-/*tiempo 1:05:21 commit "029"*/
+/*tiempo 1:14:00 commit "030"*/
 
 
 

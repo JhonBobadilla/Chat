@@ -1,15 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chat</title>
     
-    
     <script type="module">
      import { io } from 'https://cdn.socket.io/4.3.2/socket.io.esm.min.js'
 
-    const socket = io()
+     const socket = io()
+
+     const form = document.getElementById('form')
+     const input = document.getElementById('input')
+     const messages = document.getElementById('messages')
+
+     socket.on('chat message', (msg) => {
+        const item = `<li>${msg}</li>`
+        messages.insertAdjacentHTML('beforeend', item)
+     })
+
+     form.addEventListener('submit', (e) => {
+        e.preventDefault()
+
+        if (input.value){
+         socket.emit('chat message', input.value) 
+         input.value = ''  
+        }
+     })
+
+     
     </script>
     
     <style>
@@ -42,14 +62,17 @@
           height: 100%;
           scroll-behavior: smooth;
           padding-bottom: 48px;
+          color: #1c1919;
         }
     
         #messages>li {
           padding: .5rem 1rem;
+          color: #ffffff;
         }
     
         #messages>li:nth-child(odd) {
-          background: #000;
+          background: #ffffff;
+          color: #7ed957;
         }
     
         #chat {
@@ -99,6 +122,7 @@
 </head>
 <body>
    <section id="chat">
+    <ul id="messages"></ul>
     <form id="form">
        <input type="text" name="message" id="input" placeholder="Type a message" autocomplete="off" /> 
        <button type="submit">Enviar</button>

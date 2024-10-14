@@ -10,12 +10,16 @@ const app = express()
 const server = createServer(app)
 const io = new Server(server)
 
-io.on('connection', () => {
+io.on('connection', (socket) => {
     console.log('an user has connected!')
 
-    /*socket.on('disconnect', () => {
+    socket.on('disconnect', () => {
     console.log('an user has disconnected!')  
-    })*/
+    })
+
+    socket.on('chat message', (msg) => {
+        io.emit('chat message', msg) 
+    })
 })
 
 app.use(logger('dev'))

@@ -8,7 +8,8 @@ const port = process.env.PORT ?? 3000
 
 const app = express()
 const server = createServer(app)
-const io = new Server(server)
+const io = new Server(server, {connectionStateRecovery: {}
+})
 
 io.on('connection', (socket) => {
     console.log('an user has connected!')
@@ -31,3 +32,5 @@ res.sendFile(process.cwd() + '/client/index.html')
 server.listen(port, () => {
     console.log(`Server running on port ${port}`)
 })
+
+/*quede en minuto 55:00*/

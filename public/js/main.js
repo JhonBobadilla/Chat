@@ -1,1 +1,1 @@
-alert('Chat va aquí');
+console.log('Chat va aquíííííííííííííííííííí');

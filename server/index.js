@@ -39,13 +39,14 @@ io.on('connection', (socket) => {
         let result
         try {
           result = await db.execute({
-           sql: `INSERT INTO messages (content) VALUES (:message)`,
-           args: { message: msg }  
+           sql: `INSERT INTO messages (content) VALUES (:msg)`,
+           args: { msg }  
           })
         }catch (e){
-
+        console.error(e)
+        return
         }
-        io.emit('chat message', msg) 
+        io.emit('chat message', msg, result.lastInsertRowid.toString()) 
     })
 })
 
@@ -58,6 +59,9 @@ res.sendFile(process.cwd() + '/client/index.html')
 server.listen(port, () => {
     console.log(`Server running on port ${port}`)
 })
+
+
+/*tiempo 1:05:21 commit "029"*/
 
 
 

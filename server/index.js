@@ -24,14 +24,13 @@ authToken:'eyJhbGciOiJFZERTQSIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE3Mjg5MzQxMDYsImlkIjoi
 await db.execute(`
     CREATE TABLE IF NOT EXISTS messages (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
-    content TEXT
+    content TEXT,
+    user TEXT
     )
     `)
 
-
-
 io.on('connection', async (socket) => {
-    console.log('an user has connected!')
+    console.log('a user has connected!')
 
     socket.on('disconnect', () => {
     console.log('an user has disconnected!')  
@@ -39,28 +38,30 @@ io.on('connection', async (socket) => {
 
     socket.on('chat message', async (msg) => {
         let result
+        const username = socket.handshake.auth.username ?? 'anonymous'
+        console.log({ username })
         try {
-          result = await db.execute({
-           sql: `INSERT INTO messages (content) VALUES (:msg)`,
-           args: { msg }  
-          })
-        }catch (e){
+         result = await db.execute({
+         sql: 'INSERT INTO messages (content, user) VALUES (:msg, :username)',
+         args: { msg, username }  
+         })
+        }catch (e) {
         console.error(e)
         return
         }
-        io.emit('chat message', msg, result.lastInsertRowid.toString()) 
+
+        io.emit('chat message', msg, result.lastInsertRowid.toString(), username) 
     })
-     console.log('auth')
-     console.log(socket.handshake.auth)
+
     if (!socket.recovered) { 
     try {
         const result = await db.execute({
-            sql: 'SELECT id, content FROM messages WHERE id > ?',
+            sql: 'SELECT id, content, user FROM messages WHERE id > ?',
             args: [socket.handshake.auth.serverOffset ?? 0]
     })
 
     result.rows.forEach(row => {
-        socket.emit('chat message', row.content, row.id.toString())
+        socket.emit('chat message', row.content, row.id.toString(), row.user)
     })
 
     } catch (e){
@@ -78,6 +79,9 @@ res.sendFile(process.cwd() + '/client/index.html')
 server.listen(port, () => {
     console.log(`Server running on port ${port}`)
 })
+
+
+
 
 
 /*tiempo 1:14:00 commit "030"*/

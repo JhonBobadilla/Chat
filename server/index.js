@@ -6,7 +6,7 @@ import { Server } from 'socket.io'
 import { createServer } from 'node:http'
 
 dotenv.config()
-const port = process.env.PORT ?? 3000
+const port = process.env.PORT ?? https
 const app = express()
 const server = createServer(app)
 const io = new Server(server, { connectionStateRecovery: {} })

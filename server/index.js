@@ -4,7 +4,6 @@ import dotenv from 'dotenv';
 import pkg from 'pg';
 import { Server } from 'socket.io';
 import { createServer } from 'node:http';
-import path from 'path';  // Importa el módulo path
 
 dotenv.config();
 const { Client } = pkg;
@@ -85,12 +84,21 @@ io.on('connection', async (socket) => {
 });
 
 app.use(logger('dev'));
-app.use(express.static(path.join(process.cwd(), 'client')));  // Sirve archivos estáticos desde la carpeta 'client'
-
 app.get('/', (req, res) => {
-  res.sendFile(path.join(process.cwd(), 'client/index.html'));
+  res.sendFile(process.cwd() + '/client/index.html');
 });
 
 server.listen(port, () => {
   console.log(`Server running on port ${port}`);
 });
+
+
+
+
+
+
+
+
+
+
+

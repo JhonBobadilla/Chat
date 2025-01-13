@@ -1,0 +1,2588 @@
+/*configuración general*/
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+ }
+ 
+ /*google font*/
+ 
+  /*@import url('https://fonts.googleapis.com/css2?family=Bowlby+One+SC&family=Rammetto+One&display=swap');*/
+ 
+ 
+ /*estilos al body para backgroud*/
+ 
+ body {
+    
+    background-image: 
+    url(../img/background_ppal_grisss.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+     
+      }
+ /*header*/
+ 
+  .cont_logo_hardy_list {
+    
+    width: 100%;
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: 1fr 4fr 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: 
+     "logo nombre lista";}
+     
+     
+  .principal_logo {
+  
+    display: flex;
+    justify-content: center;
+      
+    }
+ 
+  .principal_titulo {
+ 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+       
+    }
+ 
+ 
+  .menu {
+ 
+    
+    display: flex;
+    padding: 0px;
+    
+          
+    }
+ 
+    .listas {
+    
+     list-style: none; 
+     grid-area: lista;
+     font-family: "Bowlby One SC", sans-serif;
+     font-size: 20px;
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     margin: 0px;
+     
+     }
+ 
+ #navbarNav{
+ 
+   justify-content: center;
+ 
+ }
+      
+     .style_a {
+ 
+       text-decoration: none;
+       color:#7ed957;
+       
+             
+       }
+ 
+ 
+     .container-fluid{
+ 
+     display: flex;
+     justify-content: center !important;
+     }
+ 
+     .crecee:hover {
+ 
+       transform: scale(1.2);
+       
+          }
+ 
+     .navbar-toggler-icon {
+ 
+       background:#7ed957
+       
+     }
+ 
+     .navbar-toggler {
+ 
+     border: 3px solid #7ed957 !important; 
+     
+     
+     }
+ 
+    .nav-item {
+ 
+    align-items: center !important;
+    justify-content: center !important;
+ 
+    }
+   
+  .logo1 {
+    
+    grid-area: logo;
+    height: 180px;
+    
+    } 
+ 
+  .titulo {
+     
+    grid-area: nombre;
+    font-family: "Bowlby One SC", sans-serif;
+    font-size: 100px;
+    color: #000000;
+    -webkit-text-stroke: 2px #7ed957;
+    
+    }
+ 
+   h2 {
+     
+     
+     font-family: "Bowlby One SC", sans-serif;
+     font-size: 60px;
+     color: #000000;
+     -webkit-text-stroke: 2px #7ed957;
+     display: flex;
+     justify-content: center;
+     padding: 100px 0px 100px 0px;
+     
+     }
+  
+   
+ /*form de acceso*/
+ 
+  .acceso {
+     
+    font-family: "Bowlby One SC", sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 100px;
+    background: none;
+    margin-top: 20px;
+    
+  }
+ 
+  .usuario {
+ 
+    font-family: sans-serif;
+    color: #7ed957;
+    border-radius: 10px;
+    border-color: #7ed957;
+    background: none;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    justify-content: center;
+    
+  }
+ 
+  .password {
+    
+    font-family: sans-serif; 
+    color: #7ed957;
+    border-radius: 10px;
+    border-color: #7ed957;
+    background: none;
+    
+    }
+ 
+  .cont_input {
+ 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 5px solid #7ed957;
+    border-radius: 10px;
+    padding: 0px;
+    
+   }
+ 
+  label {
+     
+    text-align: center;
+    color: #7ed957;
+    font-style: italic;
+    font-size: 30px;
+    margin-top: 30px;
+    padding: 0px;
+    
+   }
+   
+  .goer {
+     
+ 
+    font-family: "Bowlby One SC", sans-serif;
+    font-size: 30px;
+    width: 300px;
+    padding: 20px;
+    margin: 50px;
+    border-radius: 10px;
+    text-align: center;
+    color: #000000;
+    background-color: #7ed957;
+    
+    }
+ 
+ 
+    .entrar:hover {
+ 
+     transform: scale(1.2);
+     
+        }
+ 
+   
+   .cont_affiliate {
+ 
+   display: flex;
+   justify-content: center;
+ 
+ 
+    }
+ 
+    .suscribete:hover {
+ 
+     transform: scale(1.5);
+     
+        }
+    
+    .sucre {
+     
+     font-family: "Bowlby One SC", sans-serif;
+     font-size: 25px;
+     width: 500px;
+     padding: 8px;
+     margin-top: 180px;
+     border-radius: 10px;
+     text-align: center;
+     color: #7ed957;
+     border: 7px solid #7ed957;  
+     background-color: #000000;
+     margin: 120px;
+         
+     }
+ 
+ 
+ /*footer*/
+ 
+  .copi_red {
+    
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: 
+     "vacio copi redes";
+    
+    }
+ 
+  .p_copi {
+ 
+ margin: 0px;
+ 
+  }
+ 
+  .copi {
+ 
+    grid-area: copi;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Bowlby One SC", sans-serif;
+    color: #7ed957;
+     
+    }
+  
+  .red {
+ 
+    grid-area: redes;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    display: flex;
+    flex-direction: row;
+      
+  }  
+    
+  .red_social1 {
+ 
+    height: 73px;
+ 
+    }
+ 
+  .red_social2 {
+ 
+    height: 42px;
+ 
+    }
+  
+  .red_social3 {
+ 
+    height: 65px;
+ 
+    }
+ 
+  .red_social4 {
+ 
+    height: 50px;
+    
+    }
+ 
+ /*CSS SERVICIOS*/
+ 
+ .pservicios{
+ 
+ 
+ font-family: "Bowlby One SC", sans-serif;
+ font-size: 30px;
+ color: #000000;
+ -webkit-text-stroke: 2px #7ed957;
+ /*margin: 0px;
+ padding: 0px;
+ border: 0px;;*/
+ 
+ }
+ 
+ 
+   .titulo_servicios {
+ 
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   font-family: "Bowlby One SC", sans-serif;
+   font-size: 80px;
+   color: #000000;
+   -webkit-text-stroke: 2px #7ed957;
+   
+   }
+ 
+   .cont_servicios {
+ 
+    height: 100%;
+    gap: 50px;
+    margin-top: 80px;
+    display: grid;
+    grid-template-columns: 1fr 2fr 2fr 2fr 2fr 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: 
+     "vacio gimnasio salud cocina tienda vacio2";
+    
+ 
+   }
+ 
+   .gimn {
+ 
+   background-color: #000000;
+   grid-area: gimnasio;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center; 
+   border: 5px solid #7ed957; 
+   border-radius: 10%;}
+   
+    
+   .foto_gimn{
+ 
+     width: 100%;
+     height: 100%;
+     border-radius: 10%;
+     
+   }
+ 
+   .sal {
+ 
+     background-color: #000000;
+     grid-area: salud;
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     justify-content: center; 
+     border: 5px solid #7ed957; 
+     border-radius: 10%;
+   
+   }
+     .foto_sal{
+   
+       width: 100%;
+       height: 100%;
+       border-radius: 10%;
+       
+   
+     }
+ 
+     .coc {
+ 
+       background-color: #000000;
+       grid-area: cocina;
+       display: flex;
+       flex-direction: column;
+       align-items: center;
+       justify-content: center; 
+       border: 5px solid #7ed957; 
+       border-radius: 10%;}
+       
+        
+       .foto_coc{
+     
+         width: 100%;
+         height: 100%;
+         border-radius: 10%;
+         
+         }
+ 
+    
+       .tie {
+ 
+         background-color: #000000;
+         grid-area: tienda;
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+         justify-content: center; 
+         border: 5px solid #7ed957; 
+         border-radius: 10%;}
+         
+          
+         .foto_tie{
+       
+         width: 100%;
+         height: 100%;
+         border-radius: 10%;
+           
+         }
+ 
+   .servicios {
+ 
+   /*background-image: 
+   url(../img/background_servicios.png);*/
+   background: none;
+   background-color: #000000;
+   background-attachment: fixed;
+   background-size: cover;
+ 
+   }
+ 
+   
+ .copi_red_servicios{
+ 
+   
+    
+     width: 100%;
+     display: grid;
+     grid-template-columns: 1fr 3fr 1fr;
+     grid-template-rows: 1fr;
+     grid-template-areas: 
+      "vacio copi redes";
+     
+     margin-top: 130px;
+     
+     }
+ 
+ /*CSS GIMNASIO*/
+  
+   .gimnasio {
+ 
+   background-image: 
+   url(../img/background_gym.jpg);
+   background-attachment: fixed;
+   background-size: cover;
+ 
+    }
+  
+  .lista_gimnasio {
+ 
+    font-family: "Bowlby One SC", sans-serif;
+    color: #7ed957;
+    font-size: 30px;
+    padding: 150px;
+    list-style: none;
+       }
+ 
+  .titulo_gimnasio {
+       
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Bowlby One SC", sans-serif;
+    font-size: 100px;
+    color: #000000;
+    -webkit-text-stroke: 2px #7ed957;
+ 
+    }
+ 
+    .copi_red_gimnasio{
+ 
+   
+    
+     width: 100%;
+     display: grid;
+     grid-template-columns: 1fr 3fr 1fr;
+     grid-template-rows: 1fr;
+     grid-template-areas: 
+      "vacio copi redes";
+     margin-top: 130px;
+     
+     }
+ 
+     /* css clases en vivo*/
+ 
+     .cont_clases_en_vivo {
+ 
+       height: 100%;
+       gap: 50px;
+       margin-top: 80px;
+       display: grid;
+       grid-template-columns: 2fr 1fr 2fr;
+       grid-template-rows: 1fr;
+       grid-template-areas: 
+        "vacio vivo vacio2";
+        
+      }
+ 
+      .cont_clases_en_vivo_2 {
+ 
+       height: 100%;
+       gap: 50px;
+       margin: 3px;
+       display: grid;
+       grid-template-columns: 2fr 1fr 2fr;
+       grid-template-rows: 1fr;
+       grid-template-areas: 
+        "vacio vivo vacio2";
+             }
+ 
+      .vivo {
+ 
+       background-color: #000000;
+       grid-area: vivo;
+       display: flex;
+       flex-direction: column;
+       align-items: center;
+       justify-content: center; 
+       border: 5px solid #7ed957; 
+       border-radius: 9%;
+     
+     }
+ 
+     .vivo_cont2 {
+ 
+       margin-bottom: 0;
+       grid-area: vivo;
+       display: flex;
+       flex-direction: column;
+       align-items: center;
+       justify-content: center; 
+       border-radius: 5px;
+     
+     }
+ 
+      
+ 
+      .pservicios_vivo{
+ 
+       font-family: "Bowlby One SC", sans-serif;
+       font-size: 50px;
+       color: #000000;
+       -webkit-text-stroke: 2px #7ed957;
+       margin: 0;
+       padding: 0;
+       border: 0;
+ 
+      }
+ 
+     .texto_clase_en_vivo {
+       
+     
+     font-family: "Stick No Bills", sans-serif;
+     font-size: 30px;
+     color: #7ed957;
+     justify-items: center;
+     justify-content: center;
+     align-items: center;
+     
+     
+       
+    
+       }
+ 
+ 
+  /*.cont_vide{
+ 
+    display: flex;
+    justify-content: center; 
+    gap:85px;
+   
+   }*/
+   
+  /*video{
+   
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+ 
+   .iframe_video {
+ 
+ height: 300px;
+ width: 400px;
+ gap: 30px;
+ 
+   }*/
+   
+  
+ /*CSS SOBRE_NOSOTROS*/
+ 
+  .sobrenosotros{
+       
+    /*font-family: "Bowlby One SC", sans-serif;*/
+    font-family: "Stick No Bills", sans-serif;
+    font-size: 40px;
+    color: #7ed957;
+    margin-top: 150px;
+    margin-bottom: 220px;
+    margin-left: 150px;
+    margin-right: 150px;
+    text-align: justify;
+ 
+    }
+ 
+   .cont_sobrenosotros {
+ 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+ 
+   }
+ 
+   .sobrenosotros_titulo {
+ 
+    display: flex;
+    justify-content: center;
+   
+   }
+ 
+   .sobre_nosotros {
+      
+    background-image: 
+    url(../img/background_sobre_nosotros.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    
+    }
+ 
+ /*CSS CONTACTENOS*/
+ 
+   .contactenos{
+ 
+   font-family: "Stick No Bills", sans-serif;
+   font-size: 24px;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   padding-top: 30px;
+   
+   }
+ 
+   .titulo_contactenos {
+   display: flex;
+   justify-content: center;
+   font-family: "Bowlby One SC", sans-serif;
+   font-size: 100px;
+   color: #000000;
+   -webkit-text-stroke: 2px #7ed957;
+   
+   }
+    
+  .background_contactenos{
+ 
+   background-image: 
+   url(../img/background_contactenos2.jpg);
+   background-attachment: fixed;
+   background-size: cover;
+   }
+ 
+   .copi_red_contacto {
+ 
+ padding-top: 130px;
+   }
+ 
+ .form_contactenos{
+ 
+   display: flex;
+   justify-content: center;
+   padding-top: 20px;
+     
+ }
+ 
+ .input_send {
+ 
+ color: #000000;
+ background-color: #7ed957;
+ font-size: 25px;
+ width: 300px;
+ height: 50px;
+ 
+ }
+ 
+  .cont{
+ 
+ background: none;
+ color: #7ed957;
+ border: 2px solid #7ed957;
+ 
+  } 
+ 
+ 
+ /*CSS DISCIPLINAS -- Este es el css de todas las disciplinas deportivas*/
+  
+ .cont_disciplinas {
+ 
+   height: 100%;
+   gap: 30px;
+   display: grid;
+   grid-template-columns: 1fr 2fr 2fr 2fr 2fr 1fr;
+   grid-template-rows: 1fr;
+   grid-template-areas: 
+    "vacio cont_vid0 cont_vid2 cont_vid3 cont_vid4 vacio2";
+    
+      
+  }
+ 
+  .foto_disciplinas{
+ 
+   width: 100%;
+   height: 100%;
+   border-radius: 10%;
+   
+   
+ }
+ 
+  .p_disciplinas{
+ 
+ 
+   font-family: "Bowlby One SC", sans-serif;
+   font-size: 30px;
+   color: #000000;
+   -webkit-text-stroke: 2px #7ed957;
+   margin-top: 50px;
+   
+   }
+ 
+ 
+  .cont_vid1 {
+ 
+   background-color: #000000;
+   height: 400px;
+   width:400px;
+   grid-area: cont_vid0;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center; 
+   border: 5px solid #7ed957; 
+   margin-bottom: 100px;
+   
+ 
+ }
+ 
+   .cont_vid2 {
+ 
+     background-color: #000000;
+     height: 400px;
+   width: 400px;
+     grid-area: cont_vid2;
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     justify-content: center; 
+     border: 5px solid #7ed957; 
+     margin-bottom: 100px;
+     
+   
+   }
+ 
+   .cont_vid3 {
+ 
+     background-color: #000000;
+     height: 400px;
+   width: 400px;
+     grid-area: cont_vid3;
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     justify-content: center; 
+     border: 5px solid #7ed957; 
+     margin-bottom: 100px;
+     
+   
+   }
+ 
+   .cont_vid4 {
+ 
+     background-color: #000000;
+     height: 400px;
+     width: 400px;
+     grid-area: cont_vid4;
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     justify-content: center; 
+     border: 5px solid #7ed957; 
+     margin-bottom: 100px;
+     
+   
+   }
+ 
+   .div-img-prof{
+ 
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+   }
+ 
+   .img-prof{
+ 
+    width: 30vh;
+    
+ 
+   }
+ 
+   .texto_disciplinas_prof {
+ 
+     font-family: "Stick No Bills", sans-serif;
+     font-size: 25px;
+     color: #7ed957;
+     margin-top: -35px;
+     margin-bottom: 30px;
+     justify-content: center;
+     
+ 
+   }
+  
+ /* BARRA DE PROGRESO */ 
+ 
+ #body_progress { display: flex; flex-direction: column; 
+ align-items: center; justify-content: center; 
+ height: 100vh; 
+ margin: 0; 
+ background: none !important; background-color: #000000 !important; } 
+ .progress-container { width: 210px; 
+ height: 20px; background-color: rgb(255, 255, 255); 
+ border-radius: 15px; overflow: hidden; margin-top: 80px; } .progress-bar { 
+ height: 100%; 
+ width: 0%;  
+ border-radius: 15px; transition: width 0.4s ease-in-out, background-color 0.4s ease-in-out; }
+ 
+ .navigation-buttons { display: flex; 
+ gap: 1px; 
+ justify-content: center; 
+ }
+ 
+ div.back_button, div
+ 
+ .forward_button { 
+ 
+ padding: 5px; font-size: 30px; cursor: pointer; 
+ 
+ }
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ .gimnasio {
+ 
+   background-image: 
+   url(../img/background_gym.jpg);
+   background-attachment: fixed;
+   background-size: cover;
+   
+ 
+    }
+  
+  .lista_gimnasio {
+ 
+    font-family: "Bowlby One SC", sans-serif;
+    color: #7ed957;
+    font-size: 30px;
+    padding: 150px;
+    list-style: none;
+       }
+ 
+  .titulo_gimnasio {
+       
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Bowlby One SC", sans-serif;
+    font-size: 100px;
+    color: #000000;
+    -webkit-text-stroke: 2px #7ed957;
+ 
+    }
+ 
+    .copi_red_gimnasio{
+ 
+     width: 100%;
+     display: grid;
+     grid-template-columns: 1fr 3fr 1fr;
+     grid-template-rows: 1fr;
+     grid-template-areas: 
+      "vacio copi redes";
+     
+     margin-top: 130px;
+ 
+    }
+ 
+    .texto_disciplinas{
+       
+     
+     font-family: "Stick No Bills", sans-serif;
+     font-size: 35px;
+     color: #7ed957;
+     margin-top: 50px;
+     margin-bottom: 30px;
+     margin-left: 150px;
+     margin-right: 150px;
+     text-align: justify;
+  
+     }
+ 
+     .texto_disciplinas2{
+       
+     
+       font-family: "Stick No Bills", sans-serif;
+       font-size: 35px;
+       color: #7ed957;
+       margin-top: 50px;
+       margin-bottom: 100px;
+       margin-left: 150px;
+       margin-right: 150px;
+       text-align: justify;
+    
+       }
+ 
+     .temporada{
+       
+       display: flex;
+       font-family: "Stick No Bills", sans-serif;
+       font-size: 40px;
+       color: #7ed957;
+       margin-top: 80px;
+       margin-bottom: 40px;
+       justify-content: center;
+ 
+     }
+  
+    .cont_texto_disciplinas {
+  
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+  
+    }
+ 
+ 
+ /*CSS SALUD Y BIENESTAR
+ 
+ ojo al habiliotar daña todo, ARREGLAR
+ 
+ .parra_salud_y_bienestar{
+ 
+ 
+   font-family: "Bowlby One SC", sans-serif;
+   font-size: 30px;
+   color: #000000;
+   -webkit-text-stroke: 2px #7ed957;
+   margin: 0px;
+   
+   }
+   
+     .titulo_salud_y_bienestar {
+   
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     font-family: "Bowlby One SC", sans-serif;
+     font-size: 80px;
+     color: #000000;
+     -webkit-text-stroke: 2px #7ed957;
+     
+     }
+   
+ 
+     .cont_servicios {
+   
+      height: 100%;
+      gap: 100px;
+      margin-top: 80px;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      grid-template-rows: 1fr;
+      grid-template-areas: 
+       "vacio salud cocina vacio2";
+      
+   
+     }
+   
+     
+         .sal {
+   
+       background-color: #000000;
+       grid-area: salud;
+       display: flex;
+       flex-direction: column;
+       align-items: center;
+       justify-content: center; 
+       border: 5px solid #7ed957; 
+       border-radius: 10%;
+     
+     }
+       .foto_sal{
+     
+         width: 100%;
+         height: 100%;
+         border-radius: 10%;
+         
+     
+       }
+   
+       .bienestar {
+   
+         background-color: #000000;
+         grid-area: cocina;
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+         justify-content: center; 
+         border: 5px solid #7ed957; 
+         border-radius: 10%;}
+         
+          
+         .foto_coc{
+       
+           width: 100%;
+           height: 100%;
+           border-radius: 10%;
+           
+           }
+   
+      .bod_salud_y_bienestar {
+   
+     /*background-image: 
+     url(../img/background_servicios.png);
+     background: none;
+     background-color: #000000;
+     background-attachment: fixed;
+     background-size: cover;
+   
+     }
+   
+     
+   .copi_red_servicios{
+   
+     
+      
+       width: 100%;
+       display: grid;
+       grid-template-columns: 1fr 3fr 1fr;
+       grid-template-rows: 1fr;
+       grid-template-areas: 
+        "vacio copi redes";
+       
+       margin-top: 130px;
+       
+       }*/
+   
+ 
+ 
+ 
+       /*CSS TERMINOS Y CONDICIONES -- */
+ 
+       .terminos_y_condi{
+       
+         /*font-family: "Bowlby One SC", sans-serif;*/
+         font-family: "Stick No Bills", sans-serif;
+         font-size: 38px;
+         color: #7ed957;
+         margin-top: 150px;
+         margin-bottom: 80px;
+         margin-left: 150px;
+         margin-right: 150px;
+         text-align: justify;
+      
+         }
+ 
+ 
+ 
+       .terterminos{
+ 
+         background-image: 
+         url(../img/background_terminos.jpg);
+         background-attachment: fixed;
+         background-size: cover;
+ 
+       }
+       .terminos {
+     
+         font-size: 40px;
+         grid-area: nombre;
+         font-family: "Bowlby One SC", sans-serif;
+         color: #000000;
+         -webkit-text-stroke: 2px #7ed957;
+         
+           
+           }
+ 
+         .cont_sobrenosotros h2{
+           font-family: "Bowlby One SC", sans-serif;
+         color: #000000;
+         -webkit-text-stroke: 2px #7ed957;
+         margin-top: 100px;
+ 
+         }
+ 
+         .term{
+           margin-top: 100px;
+         }
+ 
+ 
+ 
+ 
+         .buttonn-container {
+           display: flex;
+           justify-content: center;
+           margin-bottom: 80px;
+           
+       }
+       .botn {
+           padding: 10px 20px;
+           font-size: 16px;
+           cursor: pointer;
+           margin-right: 60px;
+       }
+       .accept-btn {
+           background-color: #4CAF50;
+           color: white;
+           border: none;
+           border-radius: 100%;
+           width: 150px;
+       }
+       .reject-btn {
+           background-color: #f44336;
+           color: white;
+           border: none;
+           border-radius: 100%;
+           width: 150px;
+       }
+       .accept-btn:hover {
+         background-color: #7ed957; 
+     }
+ 
+     .reject-btn:hover {
+       background-color: #000000; 
+   }
+ 
+ 
+ /*CSS REGISTER -- */
+ 
+   .cont_logo_hardy_list_register {
+     
+     width: 100%;
+     margin-top: 30px;
+     display: grid;
+     grid-template-columns: 1fr 4fr 1fr;
+     grid-template-rows: 1fr 4fr 1fr;
+     grid-template-areas: 
+      "logo nombre lista"
+      "nada formularioo nadaa";
+     }
+ 
+   .formularioo {
+   
+     grid-area: formularioo;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+        
+    }
+ 
+    .formm {
+   
+     grid-area: formulario;
+     background-color: none;
+     border: #7ed957 5px solid; 
+     border-radius: 10%;
+     padding: 50px;
+     width: 500px;
+     text-align: center;
+     
+   } 
+   
+   form a{
+ 
+     color: #7ed957; 
+     display: block;
+     font-size: 20px;
+     text-decoration: none;
+     margin-bottom: 25px;
+     padding-top: 50px;
+   
+   }
+ 
+   .input-container > i{
+ 
+     border-radius: 50%;
+     background-color: #7ed957;
+     padding: 14px;
+     color: #000000;
+     position: absolute;
+     font-size: 20px;
+     top: 4px;
+     left: 10px;
+   }
+ 
+ 
+   .input-container > input {
+ 
+     padding: 17px 15px 17px 65px;
+     width: 100%;
+     margin-bottom: 25px;
+     border-radius: 35px;
+     background-color: transparent;
+     color: #7ed957;
+     border: 2px solid #7ed957;
+     font-size: 16px;
+     outline: none;
+   }
+ 
+   ::placeholder {
+ 
+     color: #7ed957;
+     font-size: 18px;
+   }
+   
+   .btn {
+   
+     background: #7ed957;
+     border-radius: 45%;
+     border: 0;
+     color: #000000;
+     font-family: "Bowlby One SC", sans-serif;
+     font-size: 20px;
+     cursor: pointer;
+     padding: 15px 80px;
+   }
+   
+   .success {
+   
+     position: absolute; 
+     top: 50px;
+     color: #7ed957;
+     font-size: 18px;
+   
+   }
+   
+   .error {
+   
+    position: absolute;
+    top: 50px;
+    color: rgba(255, 0, 38, 0.867);
+    font-size: 18px 
+   
+   }
+ 
+   .input-container {
+                 
+     position: relative;
+     
+   }
+   
+ 
+   .navbar {
+ 
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     
+         }
+  
+    
+ /*CSS HARDY SHOP*/
+ 
+ .hardy_shop {
+     
+   background-image: 
+   url(../img/background_gym.jpg);
+   background-attachment: fixed;
+   background-size: cover;
+   
+   }
+ 
+ .ulshop, .ilshop, .ulshopcarrito, .ilshopcarrito {
+ 
+   color: #000000;
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   font-family: "Stick No Bills", sans-serif;
+   
+ 
+ }
+ 
+ .pshop {
+ 
+   color: #7ed957;
+   font-size: 20px;
+   font-family: "Stick No Bills", sans-serif;
+ }
+ 
+ .pshopp {
+ 
+   color: #000000;
+   font-size: 20px;
+   font-family: "Stick No Bills", sans-serif;
+ 
+ }
+ 
+ .ulshop, .ulshopcarrito {
+   list-style: none;
+   margin-bottom: 20rem;
+   display: flex;
+   flex-direction: column;
+   gap: .5rem;
+   
+ }
+ 
+ .h1shoplogo  {
+ 
+   color: #000000;
+   font-family: "Stick No Bills", sans-serif;
+   margin-bottom: 2rem;
+   font-size: 40px;
+   
+ 
+ }
+ 
+ .wrapper {
+ 
+ display: grid;
+ grid-template-columns: 1fr 4fr;
+ background-color: #7ed957;
+ font-family: "Stick No Bills", sans-serif;
+ 
+ }
+ 
+ aside {
+ 
+   padding: 2rem;
+   padding-right: 0;
+   color: black;
+   position: sticky;
+   top: 0;
+   height: 100vh;
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+   
+ }
+ 
+ .h2shop {
+ 
+   color: #000000;
+   border: #7ed957;
+   font-size: 40px;
+   margin: 20px;
+   padding: 0;
+   box-sizing: border-box;
+   font-family: "Stick No Bills", sans-serif;
+ 
+ }
+ 
+ .h3shop, .small-carrito {
+ 
+   
+   color: #000000;
+   font-size: 20px;
+   font-family: "Stick No Bills", sans-serif;
+     
+ 
+ }
+ 
+ .boton-menu {
+ 
+ background-color: transparent;
+ border: none;
+ font-size: 1.5rem;
+ cursor: pointer;
+ display: flex;
+ align-items: center;
+ gap: 1rem;
+ padding: 1rem;
+ text-decoration: none;
+ 
+ }
+ 
+ .boton-menu.active {
+ 
+   background-color: rgb(0, 0, 0);
+   color: #7ed957;
+   width: 100%;
+   border-top-left-radius: 1rem;
+   border-bottom-left-radius: 1rem;
+   position: relative;
+   
+ } 
+ 
+ .boton-menu.active::before {
+ 
+ content: '';
+ position: absolute;
+ width: 1rem;
+ height: 2rem;
+ bottom: 100%;
+ right: 0;
+ background-color: transparent;
+ border-bottom-right-radius: 1rem;
+ box-shadow: 0 1rem 0 rgb(0, 0, 0);
+ 
+ }
+ 
+ .boton-menu.active::after {
+ 
+   content: '';
+   position: absolute;
+   width: 1rem;
+   height: 2rem;
+   top: 100%;
+   right: 0;
+   background-color: transparent;
+   border-top-right-radius: 1rem;
+   box-shadow: 0 -1rem 0 rgb(0, 0, 0);
+   
+   }
+ 
+   .boton-carrito {
+ 
+ margin-top: 2rem;
+ color: #000000;
+ 
+   }
+ 
+   .boton-carrito {
+ 
+ margin-top: 2rem;
+ 
+   }
+ 
+ .numerito {
+ 
+ background-color: white;
+ color: black;
+ padding: .25rem;
+ border-radius: .25rem;
+ 
+ }
+ 
+ .boton-carrito.active .numerito{
+ 
+ background-color: #000000;
+ color: #7ed957;
+ 
+ }
+ 
+ .boton-menu > i.bi-hand-index-thumb-fill, .boton-menu > i.bi-hand-index-thumb {
+ 
+ transform: rotateZ(90deg);
+ 
+ }
+ 
+ .contenedor-carrito {
+ 
+ display: flex;
+ flex-direction: column;
+ gap: 1.5rem;
+ 
+ 
+ }
+ 
+ .main-carrito {
+ 
+ background-color: black;
+ margin: 1rem;
+ margin-left: 0;
+ border-radius: 2rem;
+ padding: 3rem;
+ 
+ 
+ }
+ 
+ .contenedor-productos{
+ 
+ display: grid;
+ grid-template-columns: repeat(4, 1fr);
+ gap: 1rem;
+ 
+ 
+ }
+ 
+ .producto-imagen {
+ 
+   max-width: 100%;
+   border-radius: 1rem;
+ 
+ }
+ 
+ .producto-detalles {
+ 
+   padding: 1rem;
+   
+   margin: 0;
+   margin-top: -2rem;
+   border-radius: 1rem;
+   background-color: #7ed957;
+   position: relative;
+   width: 100%;
+   display: flex;
+   flex-direction: column;
+   gap: .5rem;
+ 
+ }
+ 
+ .producto-agregar {
+ 
+ border-radius: 1rem;
+ background-color: #000000;
+ color:#7ed957;
+ padding: .2rem;
+ text-transform: uppercase;
+ cursor: pointer;
+ 
+ 
+ }
+ 
+ .producto-agregar:hover {
+ 
+   background-color: #ffffff;
+   color:#000000;
+     
+   }
+ 
+   .carrito-vacio, .carrito-comprado {
+ 
+   color: #7ed957;
+   font-family: "Stick No Bills", sans-serif;
+   font-size: 40px;
+   
+ 
+   }
+ 
+   .carrito-acciones {
+ 
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ 
+   }
+ 
+   .carrito-acciones-vaciar{
+ 
+ border: 0;
+ background-color: rgb(197, 194, 194);
+ padding: 1rem;
+ border-radius: 1rem;
+ color: black;
+ text-transform: uppercase;
+ cursor: pointer;
+ 
+   }
+ 
+ .carrito-acciones-derecha {
+ 
+ display: flex;
+ 
+ }
+ 
+ .carrito-acciones-total {
+ 
+ display: flex;
+ border-top-left-radius: 1rem;
+ border-bottom-left-radius: 1rem;
+ background-color: rgb(197, 194, 194);
+ padding: 1rem;
+ border-radius: 1rem;
+ color: black;
+ text-transform: uppercase;
+ gap: 1rem;
+ 
+ 
+ }
+ 
+   .carrito-acciones-comprar {
+ 
+     border: 0;
+     background-color: #7ed957;
+     padding: 1rem;
+     border-radius: 1rem;
+     color: black;
+     text-transform: uppercase;
+     cursor: pointer;
+     border-top-right-radius: 1rem;
+     border-bottom-right-radius: 1rem;
+     
+       }
+ 
+   .carrito-productos {
+ 
+   display: flex;
+   flex-direction: column;
+   gap: 1rem;
+   padding: 0;
+ 
+   }
+ 
+   .carrito-producto {
+ 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    background-color: rgb(197, 194, 194);
+    padding: .5rem;
+    padding-right: 1.5rem;
+    border-radius: 1rem;
+ 
+   }
+ 
+   .carrito-producto-imagen {
+ 
+   width: 4rem;
+   border-radius: 1rem;
+   
+   }
+ 
+ .carrito-producto-cantidad {
+ 
+   display: flex;
+   flex-direction: column;
+   justify-content: center;  
+   align-items: center;
+   
+   
+     }
+ 
+   .carrito-producto-eliminar {
+ 
+     border: 0;
+     background-color: transparent;
+     color: red;
+   
+     }
+ 
+     .porsisenecesitatexto {
+ 
+       margin-top: 80px;
+ 
+     }
+ 
+    .disabled, .header-mobile {
+ 
+ display: none;
+ 
+     }
+ 
+   .close-menu{
+       display: none;
+   
+     }
+ 
+   .copi-shop{
+ 
+     margin-top: 100px;
+    
+ 
+   }
+ 
+   
+ /*HASTA AQUÍ CSS HARDY SHOP*/
+ 
+ /*css nombre de usuario*/
+ 
+ .nombre_de_usuario{
+ 
+   display: flex;
+   align-items: center;
+   justify-content: right;
+   font-family: "Stick No Bills", sans-serif;
+   font-size: 25px;
+   color: #7ed957;
+   padding: 2rem 5rem 2rem 5rem;
+    
+   }
+ 
+ /*RESPONSIVE*/
+ /*RESPONSIVE PAGINA INICIO*/
+ 
+   @media (height > 1179px) {
+   
+   .copi_red{
+   
+    padding: 100px;
+   
+   }
+   }
+ 
+   @media (width < 1846px) {
+   body{
+   background-image: url(../img/background_ppal_1845.jpg);
+   
+   }
+   }
+ 
+   @media (width < 1459px) {
+   body{
+   background-image: url(../img/background_ppal_1458.jpg);
+     
+   }
+   }
+ 
+   @media (width < 1846px) {
+   .titulo {
+ 
+   font-family: "Bowlby One SC", sans-serif;
+   font-size: 70px;
+     
+   }
+   }
+   
+  
+   @media (width < 1496px) {
+   .copi_red {
+   width: 100%;
+   display: grid;
+   grid-template-columns: 1fr;
+   grid-template-rows: 1fr;
+   grid-template-areas: 
+    "copi redes";
+   display: flex;
+   flex-direction: column;
+   
+   }
+   }
+ 
+   @media (width < 1496px) {
+   .copi {
+ 
+   grid-area: copi;
+   align-items: center;
+   justify-content: center;
+   font-size: 15px;
+    
+   }
+   }
+  
+   @media (width < 1496px) {
+   .red {
+ 
+   grid-area: redes;
+   justify-content: center;
+   gap: 10px;
+   
+   }   
+   }
+ 
+   @media (width < 1250px) {
+   body{
+   background-image: url(../img/background_ppal_1250.jpg);
+           
+   }
+   }
+ 
+   @media (width < 1064px) {
+   .titulo {
+   
+   font-size: 50px;
+       
+   }
+   }
+ 
+   
+ 
+   
+ 
+     @media (width < 992px) {
+       .menu {
+          
+       font-size: 14px;
+       
+       }
+       }
+ 
+       
+ 
+     
+       
+   @media (width < 841px) {
+   .copi {
+   
+   font-size: 8px;
+ 
+   }
+   }
+ 
+   @media (width < 645px) {
+   .titulo {
+     
+   font-size: 45px;
+         
+   }
+   }
+ 
+   @media (width < 645px) {
+     .principal_logo {
+      
+     align-items: center;
+     
+           
+     }
+     }
+   @media (width < 645px) {
+   .logo1 {
+    
+   height: 110px;
+   
+         
+   }
+   }
+ 
+   @media (width < 651px) {
+   body{
+   background-image: url(../img/background_ppal_650.jpg);
+             
+   }
+   }
+ 
+   @media (width < 449px) {
+   .copi {
+       
+   font-size: 7px;
+     
+   }
+   }
+   
+   @media (width < 396px) {
+     .copi {
+         
+     font-size: 5px;
+       
+     }
+     }
+   
+   @media (width < 500px) {
+   .titulo {
+           
+   font-size: 35px;
+               
+   }
+   }
+ 
+   @media (width < 651px) {
+     .cont_input {
+             
+     width: 350px;
+                 
+     }
+     }
+     @media (width < 432px) {
+       .titulo {
+               
+       font-size: 30px;
+                   
+       }
+       }
+ 
+       @media (width < 393px) {
+         .logo1 {
+          
+         height: 90px;
+         
+               
+         }
+         }
+ 
+         @media (width < 398px) {
+           .titulo {
+                   
+           font-size: 25px;
+                       
+           }
+           }
+     
+           @media (width < 376px) {
+             .logo1 {
+              
+             height: 70px;
+             
+                   
+             }
+             }
+ 
+       @media (width < 446px) {
+         .cont_input {
+                       
+         width: 250px;
+                           
+         }
+         }
+       @media (width < 446px) {
+       .password {
+                     
+       width: 210px;
+                         
+       }
+       }    
+   
+       @media (width < 446px) {
+       .usuario {
+                       
+       width: 210px;
+                           
+       }
+       } 
+ 
+       @media (width < 446px) {
+       .goer {
+                         
+       width: 210px;
+       height: 40px;
+       font-size: 20px;
+       padding: 0px;
+       
+       
+       
+       
+       
+       }
+       } 
+ 
+       @media (width < 446px) {
+       label {
+                           
+       font-size: 21px;
+       
+                               
+       }
+       } 
+ 
+     @media (width < 335px) {
+       .menu {
+            
+       font-size: 10px;
+         
+       }
+       }
+ 
+ 
+ /*RESPONSIVE PAGINA CONTACTENOS*/ 
+   
+   @media (width < 841px) {
+   .titulo_contactenos {
+   
+   font-size: 45px;
+ 
+   }
+   }
+ 
+   @media (width < 894px) {
+   input {
+   
+   width: 300px
+   
+   }
+   }
+   
+   @media (width < 894px) {
+   textarea {
+     
+   width: 300px
+     
+   }
+   }
+ 
+ /*RESPONSIVE PAGINA SOBRE NOSOTROS*/ 
+ 
+   @media (width < 1659px) {
+   .sobre_nosotros {
+         
+   background-image: url(../img/background_sobre_nosotross.jpg);
+         
+   }
+   }
+ 
+   @media (width < 1131px) {
+   .sobre_nosotros {
+           
+   background-image: url(../img/background_sobre_nosotrosss.jpg);
+           
+   }
+   }
+ 
+   @media (width < 860px) {
+   .sobre_nosotros {
+               
+   background-image: url(../img/background_sobre_nosotrossss.jpg);
+               
+   }
+   }
+ 
+   @media (width < 1846px) {
+   .titulo_sobrenosotros {
+                 
+   margin-top: 30px;
+                 
+   }
+   }
+ 
+ /*RESPONSIVE PAGINA SERVICIOS*/ 
+ 
+  
+ @media (width < 1440px) {
+  .cont_servicios {
+  
+   display: flex;
+   flex-direction: column;
+   width: 300px;
+   justify-content: center;
+   margin: auto;
+    
+  }
+  }
+ 
+  @media (width < 1416px) {
+   .copi_red_servicios {
+   
+   display: flex;
+   flex-direction: column;
+       
+   }
+   }
+   
+   @media (width < 1200px) {
+     .titulo_servicios {
+     
+      font-size: 60px;
+       
+     }
+     }
+   
+   
+ 
+  @media (width < 1027px) {
+   .titulo_servicios {
+   
+    font-size: 40px;
+     
+   }
+   }
+ 
+   @media (width < 723px) {
+     .titulo_servicios {
+     
+      font-size: 35px;
+       
+     }
+     } 
+ 
+   @media (width < 653px) {
+     .titulo_servicios {
+     
+      font-size: 30px;
+       
+     }
+     } 
+ 
+     @media (width < 522px) {
+       .titulo_servicios {
+       
+        font-size: 20px;
+         
+       }
+       } 
+ 
+     @media (width < 410px) {
+         .titulo_servicios {
+         
+          font-size: 18px;
+          
+           
+         }
+         } 
+ 
+       @media (width < 353px) {
+           .titulo_servicios {
+           
+            font-size: 14px;
+            
+             
+           }
+           } 
+     
+     @media (width < 572px) {
+     .copi_servicios{
+ 
+       font-size: 5px;
+   
+     }
+     }
+ 
+ /*RESPONSIVE PAGINA GIMNASIO*/ 
+ 
+  
+ 
+ /*.gimnasio {
+ 
+   background-image: 
+   url(../img/background_gimnasioo.jpg);
+   
+   }
+   }*/
+ 
+ 
+  @media (width < 1100px) { 
+  
+   .lista_gimnasio {
+ 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 30px;
+    padding-left: 0px;
+    padding-right: 0px;
+    
+    }
+    }
+ 
+  @media (width < 550px) { 
+   .titulo_gimnasio{
+       
+    font-size: 50px;
+    
+ 
+    }
+    }
+ 
+   @media (width < 550px) { 
+  
+    .lista_gimnasio {
+   
+     font-size: 20px;
+          
+    }
+    }
+ 
+    @media (width < 1402px) {
+     .copi_red_gimnasio {
+     
+     display: flex;
+     flex-direction: column;
+         
+     }
+     }
+ 
+ 
+   /*@media (width < 550px) { 
+   
+    .gimnasio {
+     
+    background-image: 
+    url(../img/background_gimnasiooo.jpg);
+     git commit -am "''32   }
+    }*/
+   
+   /*@media (width < 1233px) {
+    .cont_vid{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; 
+    gap:85px;
+    
+    }
+    }*/
+   @media (width < 1333px) {
+    video{
+     
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    }
+    }
+ 
+ /*RESPONSIVE PAGINAS DISCIPLINAS*/ 
+ 
+    @media (width < 1233px) {
+     .cont_disciplinas {
+     
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      
+     
+     }
+     }
+ 
+ /*RESPONSIVE SALUD Y BIENESTAR*/ 
+ 
+     @media (width < 1200px) {
+       .titulo_salud_y_bienestar {
+       
+        font-size: 60px;
+         
+       }
+       }
+     
+    @media (width < 1027px) {
+     .titulo_salud_y_bienestar {
+     
+      font-size: 40px;
+       
+     }
+     }
+   
+     @media (width < 723px) {
+       .titulo_salud_y_bienestar {
+       
+        font-size: 35px;
+         
+       }
+       } 
+   
+     @media (width < 653px) {
+       .titulo_salud_y_bienestar {
+       
+        font-size: 30px;
+         
+       }
+       } 
+   
+       @media (width < 522px) {
+         .titulo_salud_y_bienestar {
+         
+          font-size: 20px;
+           
+         }
+         } 
+   
+       @media (width < 410px) {
+           .titulo_salud_y_bienestar {
+           
+            font-size: 18px;
+            
+             
+           }
+           } 
+   
+         @media (width < 353px) {
+             .titulo_salud_y_bienestar {
+             
+              font-size: 14px;
+              
+               
+             }
+             } 
+   
+          /*RESPONSIVE TERMINOS Y CONDICIONES*/
+ 
+          @media (width < 1846px) {
+           .terminos {
+         
+           font-family: "Bowlby One SC", sans-serif;
+           font-size: 35px;
+             
+           }
+           }
+     
+         @media (width < 1493px) {
+           .terminos {
+           
+             font-family: "Bowlby One SC", sans-serif;
+             font-size: 25px;
+               
+             }
+             }
+     
+         @media (width < 1067px) {
+           .terminos {
+             
+               font-family: "Bowlby One SC", sans-serif;
+               font-size: 15px;
+                 
+               }
+               }
+     
+         @media (width < 686px) {
+           .terminos {
+               
+                 font-family: "Bowlby One SC", sans-serif;
+                 font-size: 8px;
+                   
+                 }
+                 }
+     
+         @media (width < 405px) {
+                   .terminos {
+                 
+                   font-family: "Bowlby One SC", sans-serif;
+                   font-size: 5px;
+                     
+                   }
+                   }
+     
+  
+           @media (width < 919px) {
+               .cont_sobrenosotros h2 {
+               
+                font-size: 14px;
+                
+                 
+               }
+               } 
+ 
+           @media (width < 424px) {
+                 .cont_sobrenosotros h2 {
+                 
+                  font-size: 10px;
+                  
+                   
+                 }
+                 } 
+ 
+ 
+ /*RESPONSIVE REGISTER*/
+ 
+             
+ @media(max-width:991px){
+                 
+ 
+                 
+   .formm{
+   width: 340px
+   }
+        
+   
+ }
+ 
+ /*RESPONSIVE HARDY SHOP*/
+ 
+ 
+ 
+ @media screen and (max-width: 850px){
+ 
+   .contenedor-productos{
+     grid-template-columns: 1fr 1fr 1fr;
+   }
+ 
+ }
+ 
+ @media screen and (max-width: 675px){
+ 
+   .contenedor-productos{
+     grid-template-columns: 1fr 1fr;
+   }
+ 
+ }
+ 
+ @media screen and (max-width: 600px){
+ 
+ .wrapper {
+ min-height: 100vh;
+ display: flex;
+ flex-direction: column;
+ 
+ }
+ 
+ aside {
+   position: fixed;
+   z-index: 9;
+   background-color: #7ed957;
+   left: 0;
+   box-shadow: 0 0 0 100vmax rgb(0, 0, 0, .75);
+   transform: translateX(-100%);
+   opacity: 0;
+   visibility: hidden;
+   
+ }
+ 
+ .aside-visible{
+   transform: translateX(0);
+   opacity: 1;
+   visibility: visible;
+ }
+ 
+ .boton-menu.active::before, .boton-menu.active::after{
+ display: none;
+ }
+ 
+ .contenedor-productos{
+   grid-template-columns: 1fr 1fr;
+ }
+ 
+ .main-carrito{
+ margin: 1rem;
+ margin-top: 0;
+ padding: 1rem;  
+ 
+ }
+ 
+ .header-mobile, .h1shoplogo{
+   padding: 1rem;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   margin: 0;
+   
+   }
+ 
+   .open-menu, .close-menu{
+     background-color: transparent;
+     border: 0;
+     font-size: 2.5rem; 
+     cursor: pointer;
+ 
+   }
+ 
+   .close-menu{
+     display: block;
+     position: absolute;
+     top: 1rem;
+     right: 1rem;
+ 
+   }
+ 
+   .carrito-producto{
+     flex-wrap: wrap;
+     
+   }
+ 
+   .carrito-producto-subtotal{
+     display: none;
+   }
+ 
+   
+ }
+ 
+ @media(max-width:460px){
+   .carrito-acciones{
+     flex-direction: column;
+     justify-content: center;
+     row-gap: 1rem;
+   }
+   }
+ 
+ 
+ @media screen and (max-width: 400px){
+ 
+   .contenedor-productos{
+     grid-template-columns: 1fr;
+   }
+ }
+
+
+
+
+#ppal_chat, #ppal_chat::before, #ppal_chat::after { 
+    box-sizing: border-box; 
+    background-color: #000000; 
+    margin: 0; 
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; 
+    display: grid; 
+    place-content: center; 
+    height: 100vh;
+    padding: 36px 36px 100px 36px; 
+    grid-template-rows: 1fr;  
+    color-scheme: light dark;
+   }  
+
+   #messages { 
+    list-style-type: none; 
+    margin: 0; 
+    padding: 0; 
+    overflow-y: scroll; 
+    height: 100%; 
+    
+    scroll-behavior: smooth; 
+    padding-bottom: 48px; 
+    color: #1c1919; 
+   }
+
+   #messages>li { 
+    padding: .5rem 1rem; 
+    color: #ffffff;
+    
+   }
+   
+   #messages>li:nth-child(odd) { 
+    background: #2c2b2b; 
+    color: #7ed957; 
+   }
+
+   #chat { 
+    border: 1px solid #ffffff; 
+    border-radius: 4px; 
+    overflow: hidden; 
+    width: 350px; 
+    height: 100%; 
+    position: relative; 
+    width: 500px;
+   }
+
+   #form { 
+    bottom: 0; 
+    display: flex; 
+    height: 48px; 
+    left: 0; 
+    padding: 4px;
+    position: absolute; 
+    right: 0; 
+   }
+
+   #input { 
+    border-radius: 9999px; 
+    border: 1px solid #eee; 
+    flex: 1; 
+    margin: 5px; 
+    padding: 0 8px;
+    
+     
+   }
+   
+   #input:focus { 
+    outline: 0; 
+   }
+   
+   #form>button { 
+    background: #7ed957; 
+    color: #fff; 
+    margin-right: 20px;
+    margin-top: 4px;
+    border-radius: 4px;
+    padding: 0px 20px; 
+    height: 32px;
+   }
+   
+   #form>button:hover { 
+    background: rgb(58, 143, 200); 
+   }

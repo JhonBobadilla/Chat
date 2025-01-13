@@ -115,6 +115,53 @@
 
 
 
+/* Ajustes para pantallas de menos de 768px */
+@media (max-width: 768px) {
+  #chat {
+    width: 90%; /* Reduce el ancho del chat para que se ajuste mejor */
+  }
+
+  #form {
+    gap: 4px; /* Reduce el espacio entre el campo y el botón */
+  }
+
+  #input {
+    padding: 0 12px; /* Reduce el espacio interno del campo */
+  }
+
+  #form > button {
+    width: 60px; /* Reduce el ancho del botón */
+    font-size: 0.9rem; /* Ajusta el tamaño de la fuente */
+  }
+}
+
+/* Ajustes para pantallas de menos de 480px */
+@media (max-width: 480px) {
+  #chat {
+    width: 100%; /* Ocupa todo el ancho disponible */
+    border-radius: 0; /* Elimina los bordes redondeados para aprovechar mejor el espacio */
+  }
+
+  #form {
+    padding: 2px; /* Reduce el padding del formulario */
+    height: 40px; /* Ajusta la altura del formulario */
+  }
+
+  #input {
+    padding: 0 8px; /* Reduce aún más el espacio interno del campo */
+    font-size: 0.85rem; /* Ajusta el tamaño de la fuente */
+  }
+
+  #form > button {
+    width: 50px; /* Botón más pequeño */
+    font-size: 0.8rem; /* Fuente más pequeña */
+  }
+}
+
+
+
+
+
  /*header*/
 
 

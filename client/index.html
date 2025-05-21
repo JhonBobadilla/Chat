@@ -7,7 +7,7 @@
     <meta name="description" content="Descubre Hardy Gym, tu gimnasio online para entrenamiento en casa. Accede a rutinas de ejercicio, clases en vivo y consejos de fitness desde cualquier lugar.">
     <meta name="keywords" content="gimnasio online, entrenamiento en casa, fitness virtual, clases de fitness, rutinas de ejercicio en línea, coach virtual, ejercicios en casa, vida saludable, salud">
     <meta name="author" content="Hardy Gym">
-    <link rel="shortcut icon" href="../img/logo.png" type="image/x-icon">
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bowlby+One+SC&display=swap" rel="stylesheet">
@@ -23,7 +23,7 @@
 #ppal_chat::before,
 #ppal_chat::after {
   box-sizing: border-box;
-  background-color: #000000;
+  background-color: #ff0000;
   margin: 0;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   display: grid;
@@ -55,8 +55,8 @@
 
 /* Mensajes en posiciones impares tienen un fondo diferente */
 #messages > li:nth-child(odd) {
-  background: #2c2b2b;
-  color: #7ed957;
+  background: #ffffff;
+  color: #ff0000;
 }
 
 /* Contenedor principal del chat */
@@ -77,7 +77,7 @@
   display: flex;
   height: 48px;
   padding: 4px;
-  background-color: #000;
+  background-color: #ffffff;
   align-items: center;
   gap: 8px; /* Espacio entre el campo y el botón */
   border-top: 1px solid #ffffff; /* Línea separadora */
@@ -90,6 +90,9 @@
   flex: 1; /* Hace que el campo ocupe todo el espacio disponible */
   padding: 0 20px;
   min-width: 0; /* Evita problemas de tamaño */
+  background: #ffffff;
+  border: #ff0000 2px solid;
+  color: rgb(255, 0, 0)
 }
 
 /* Quitar el contorno azul al enfocar el campo */
@@ -99,7 +102,7 @@
 
 /* Botón de enviar mensaje */
 #form > button {
-  background: #7ed957;
+  background: #ff0000;
   color: #fff;
   border: 0;
   border-radius: 4px;
@@ -109,7 +112,9 @@
 
 /* Cambiar el color del botón al pasar el mouse por encima */
 #form > button:hover {
-  background: #09f;
+  background: rgb(221, 148, 148);
+  color: #ffffff;
+  
 }
 
 
@@ -166,7 +171,7 @@
 
  .cont_texto_disciplinas {
  
- background: #000000;
+ background: #ff0000;
  
     
 } 
@@ -355,7 +360,7 @@
  
     height: 73px;
     margin-bottom: 20px;
-   margin-left: 40px;
+    margin-left: 40px;
  
     }
  
@@ -459,7 +464,7 @@
     
         font-family: "Stick No Bills", sans-serif;
         font-size: 35px;
-        color: #7ed957;
+        color: #ffffff;
         text-align: justify;
         padding: 80px;
         margin-bottom: 0px;
@@ -1244,47 +1249,12 @@
 </head>
  <body class="gimnasio">
     <header>
-      <div class="cont_logo_hardy_list">
-        <div class="principal_logo">
-         <img class="logo1" src="../img/logo.png" alt="logo"></div>
-        <div  class="principal_titulo">
-        <h1 class="titulo">CHAT SOCIAL</h1></div>
-        <nav class="navbar navbar-expand-lg">
-          <div class="container-fluid crecee">
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-              <ul class="menu listas">
-                <li class="nav-item">
-                  <a class="style_a" href="https://hardy-2839d6e03ba8.herokuapp.com/pages/servicios.html"><li>Servicios</li></a>
-                </li>
-                <!-- meter esto en todas las páginas para cerrar sesión desde el último cierre </li> hasta el cierre </ul>... desde aquí -->
-                
-             <!-- hasta aquí .... y reemplazar el ultimo script -->
-              </ul>
-            </div>
-          </div>
-         </nav>
-        </ul>
-       
-      </div>
-      <!-- poner esto en todas las paginas para que aparezca el nombre-->
-      <div class="nombre_de_usuario">
-          <p id="nombreUsuario"></p>
-      </div>
-      <!-- hasta aquí-->
+      
       <div class="cont_texto_disciplinas">
         <p class="texto_disciplinas">
           
 
-          ¡Bienvenidos a Hardy Chat Social! 🌟 Aquí encontrarás un espacio único para conocer amigos que comparten tus intereses en la vida saludable.
-<br>
-<br>
-🚴‍♂️ Comparte tus avances deportivos en cada una de nuestras disciplinas 🍏 Intercambia recetas saludables 💪 Motívate con historias inspiradoras 🌿 Descubre consejos de bienestar
-<br>
-<br>
-¡Únete a nuestra comunidad llena de energía positiva y apoyo mutuo! 💬✨
+          ¡Bienvenidos al chat de apoyo, en breve un agente estará contigo ...
                            
         </p>
       
@@ -1353,20 +1323,7 @@
     </div>
 
     <footer>
-      <div class="copi_red">
-
-       <div class="copi">
-         <p class="p_register">© 2024 HARDYGYM JABL TODOS LOS DERECHOS RESERVADOS. </p>
-         <a href="https://www.instagram.com/hardygymcol/" target="_blank">
-             <img class="red_social1" src="../img/instagram.png" alt="red_social1">
-         </a>
-       </div>
-       <!--<div class="red">
-         <img class="red_social1" src="../img/instagram.png" alt="red_social1">
-         <img class="red_social2" src="../img/facebook.png" alt="red_social2">
-         <img class="red_social3" src="../img/you_tube.png" alt="red_social3">
-       </div>-->
-      </div>
+     
      </footer>
     
    

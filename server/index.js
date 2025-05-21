@@ -7,30 +7,24 @@ import { createServer } from 'node:http';
 
 dotenv.config();
 const { Client } = pkg;
-const port = process.env.PORT ?? 3000;
+const port = process.env.PORT ?? 3003;
 const app = express();
 const server = createServer(app);
 const io = new Server(server, { connectionStateRecovery: {} });
 
+// ---- CONEXIÓN A POSTGRES LOCAL ----
 const db = new Client({
-  host: 'c3nv2ev86aje4j.cluster-czrs8kj4isg7.us-east-1.rds.amazonaws.com',
+  host: 'localhost',
   port: 5432,
-  user: 'u7lk2rav6e1ko2',
-  password: 'p3f4ed7a54b68554467acefe46529129a11c92ea34105c5d161c62916dc3422aa',
-  database: 'd29avlllbhcs77',
-  ssl: { rejectUnauthorized: false }
+  user: 'postgres',
+  password: 'w858504042828',
+  database: 'chat',
 });
 
+// ---- CONEXIÓN ----
 await db.connect();
 
-await db.query(`
-  CREATE TABLE IF NOT EXISTS messages (
-    id SERIAL PRIMARY KEY,
-    content TEXT,
-    username VARCHAR(255)
-  )
-`);
-
+// ---- SOCKET.IO ----
 io.on('connection', async (socket) => {
   console.log('a user has connected!');
 
@@ -38,19 +32,20 @@ io.on('connection', async (socket) => {
     console.log('a user has disconnected!');
   });
 
-  socket.on('chat message', async (msg) => {
+  // --- ENVÍO DE MENSAJE AL CHAT ---
+  socket.on('chat message', async (msg, chatId = 1) => {
     let result;
     const username = socket.handshake.auth.username ?? 'anonymous';
-    console.log({ username });
+    console.log({ username, chatId, msg });
 
     try {
       result = await db.query({
-        text: 'INSERT INTO messages (content, username) VALUES ($1, $2) RETURNING id',
-        values: [msg, username]
+        text: 'INSERT INTO messages (content, username, chat_id) VALUES ($1, $2, $3) RETURNING id',
+        values: [msg, username, chatId]
       });
 
       if (result.rows.length > 0) {
-        io.emit('chat message', msg, result.rows[0].id.toString(), username);
+        io.emit('chat message', msg, result.rows[0].id.toString(), username, chatId);
       } else {
         console.error('No rows returned from the database.');
       }
@@ -59,6 +54,7 @@ io.on('connection', async (socket) => {
     }
   });
 
+  // --- MENSAJE PRIVADO ENTRE USUARIOS ---
   socket.on('private message', (msg, toUsername) => {
     const fromUsername = socket.handshake.auth.username ?? 'anonymous';
     const targetSocket = Array.from(io.sockets.sockets.values()).find(s => s.handshake.auth.username === toUsername);
@@ -67,15 +63,17 @@ io.on('connection', async (socket) => {
     }
   });
 
+  // --- RECUPERAR MENSAJES (por chat) ---
   if (!socket.recovered) {
     try {
+      const chatId = 1; // Puedes cambiar esto para otros chats
       const result = await db.query({
-        text: 'SELECT id, content, username FROM messages WHERE id > $1',
-        values: [socket.handshake.auth.serverOffset ?? 0]
+        text: 'SELECT id, content, username, chat_id FROM messages WHERE id > $1 AND chat_id = $2',
+        values: [socket.handshake.auth.serverOffset ?? 0, chatId]
       });
 
       result.rows.forEach(row => {
-        socket.emit('chat message', row.content, row.id.toString(), row.username);
+        socket.emit('chat message', row.content, row.id.toString(), row.username, row.chat_id);
       });
     } catch (e) {
       console.error(e);
@@ -91,14 +89,3 @@ app.get('/', (req, res) => {
 server.listen(port, () => {
   console.log(`Server running on port ${port}`);
 });
-
-
-
-
-
-
-
-
-
-
-
